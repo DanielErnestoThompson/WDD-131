@@ -57,7 +57,7 @@ main {
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .pmimage {
@@ -96,6 +96,23 @@ main {
     margin: 0;
 }
 
+.aboutme {
+    padding-bottom: 20px; /* Additional padding only for the bottom */
+}
+
+.city {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.city img {
+    height: 200px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
 footer {
     background-color: #36454f;
     color: #fff;
@@ -105,9 +122,8 @@ footer {
 
 /* Ensuring top half layout */
 .top-half {
-    min-height: 50vh;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -129,7 +145,7 @@ footer {
     main {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .aboutme {
