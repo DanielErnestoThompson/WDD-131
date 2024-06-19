@@ -108,7 +108,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 20px;
+    padding: 100px;
 }
 
 .list {
@@ -141,7 +141,7 @@ main {
 
 .img-profile {
     width: 150px;
-    height: auto;
+    height: 175;
     margin-left: 10px;
 }
 
