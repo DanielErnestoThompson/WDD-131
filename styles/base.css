@@ -56,24 +56,25 @@ main {
 }
 
 .pmimage {
-    max-width: 100px;
+    max-width: 100%;
     height: auto;
     border-radius: 50%;
 }
 
 .aboutme {
     display: grid;
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr auto;
     gap: 10px;
+    align-items: center;
 }
 
-.aboutme p, .aboutme img {
+.aboutme p {
     padding: 5px;
 }
 
 .city {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: auto 1fr;
     gap: 10px;
 }
 
