@@ -5,12 +5,16 @@
 }
 
 body {
-    display: grid;
-    height: 100vh;
-    grid-template: auto 1fr auto / auto;
+    display: flex;
+    justify-content: center;
     font-family: "DM Sans", sans-serif;
-    background-color: #fff; /* Light cream/white background */
+    background-color: #f9f9f9; /* Light cream/white background */
     color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
 }
 
 header {
@@ -49,10 +53,11 @@ nav a:hover {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
+    justify-content: space-around;
 }
 
 .pmimage {
@@ -63,27 +68,26 @@ main {
     margin: 0 auto; /* Center the image */
 }
 
-.aboutme {
-    background-color: #f9f9f9; /* Light background for contrast */
+.card {
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 40px); /* Flex items for responsive layout */
+    max-width: 33%;
 }
 
-.city img {
-    height: 150px; /* Smaller height for the city image */
-    width: auto; /* Maintain aspect ratio */
-}
-
-.city {
-    margin-top: 20px;
-}
-
-.quick-links {
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 20px;
+.card img {
+    width: 100%; /* Make images responsive */
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2, .card h3 {
+    text-align: center;
+    background-color: #bbb;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
 .card ul {
@@ -92,19 +96,19 @@ main {
     margin: 0;
 }
 
-section h2 {
-    text-align: center;
-    background-color: #bbb;
-    padding: 10px;
-    border-radius: 10px 10px 0 0;
-}
-
 footer {
     background-color: #36454f;
     color: #fff;
     text-align: center;
     padding: 20px;
-    grid-column: 1 / -1;
+}
+
+/* Ensuring top half layout */
+.top-half {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Larger Views ******************************/
@@ -123,17 +127,17 @@ footer {
     }
 
     main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .aboutme {
-        grid-column: 1;
+        flex: 1 1 100%;
     }
 
     .quick-links {
-        grid-column: 2;
+        flex: 1 1 100%;
     }
 
     footer {
