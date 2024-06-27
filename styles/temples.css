@@ -5,7 +5,6 @@
     font-family: "DM Sans";
 }
 
-
 header {
 	background-color: #124076;
     align-items: center;
@@ -89,4 +88,9 @@ footer {
     padding: 10px;
     text-align: center;
     font-weight:500;
+}
+
+/* Image styles */
+img {
+    width: 100%;
 }
